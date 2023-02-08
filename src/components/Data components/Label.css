@@ -1,0 +1,12 @@
+.label-style {
+  display: flex;
+  flex-flow: column wrap;
+}
+.label-style > span {
+  font-weight: 700;
+  font-size: calc(1.1rem + 0.4vw);
+}
+.label-style > span,
+.label-style input {
+  margin: 10px 0px;
+}
