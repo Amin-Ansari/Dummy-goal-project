@@ -1,0 +1,11 @@
+.li-style {
+  background-color: #891154;
+  padding: 15px 35px;
+  margin: 20px 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: calc(1.1rem + 0.2vw);
+}
+.li-style:hover {
+  cursor: pointer;
+}

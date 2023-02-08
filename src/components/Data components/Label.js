@@ -1,5 +1,4 @@
 import "../Data components/Label.css";
-import TextInput from "./TextInput";
 export default function Label(props) {
   return (
     <div>
