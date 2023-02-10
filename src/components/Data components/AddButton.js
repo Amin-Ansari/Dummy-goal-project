@@ -10,6 +10,12 @@ const AddButton = styled.button`
   font-size: 1.4rem;
   font-weight: 600;
   margin: 10px 0px;
+  @media all and (max-width: 576px) {
+    width: 100%;
+  }
+  @media all and (min-width: 768px) {
+    width: auto;
+  }
 `;
 
 // () => {
