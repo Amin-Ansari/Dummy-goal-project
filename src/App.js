@@ -18,10 +18,17 @@ function App() {
       return leftVal;
     });
   };
+  const passToApp = (passedFromForm) => {
+    updateArray((prevValues) => {
+      let prevItems = [...prevValues];
+      prevItems.unshift(passedFromForm);
+      return [...prevItems];
+    });
+  };
   return (
     <div className="App">
       <GoalWrapper>
-        <Form></Form>
+        <Form onPassingToApp={passToApp}></Form>
         <GoalList items={itemArray} onRemoving={removeTheTaks}></GoalList>
       </GoalWrapper>
     </div>
