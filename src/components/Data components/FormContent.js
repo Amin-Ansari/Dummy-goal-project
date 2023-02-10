@@ -19,7 +19,7 @@ const FormContent = (props) => {
           styleCondition={props.onCondition}
         ></TextInput>
       </Label>
-      <AddButton />
+      <AddButton>Add goal</AddButton>
     </div>
   );
 };
