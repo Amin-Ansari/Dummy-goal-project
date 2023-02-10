@@ -10,3 +10,9 @@
 .label-style input {
   margin: 10px 0px;
 }
+.label-style.valid > span {
+  color: #000;
+}
+.label-style.invalid > span {
+  color: red;
+}

@@ -6,3 +6,9 @@
 .text-input:focus {
   outline: none;
 }
+.text-input.valid {
+  background-color: transparent;
+}
+.text-input.invalid {
+  background-color: red;
+}

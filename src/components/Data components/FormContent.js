@@ -7,7 +7,6 @@ const FormContent = (props) => {
   const [value, updateValue] = useState("");
   const whenYouType = function () {
     props.onPassingData(value);
-    console.log(props.onCondition);
   };
   const takeDataFromInput = (takenValue) => {
     updateValue(takenValue);
