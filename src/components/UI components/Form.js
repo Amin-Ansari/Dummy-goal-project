@@ -4,15 +4,12 @@ import FormContent from "../Data components/FormContent";
 import { useState } from "react";
 export default function GoalWrapper(props) {
   const [content, updatecontent] = useState("");
-  const [styleCondition, updateCondition] = useState(true);
   const submittingForm = (eventObject) => {
     eventObject.preventDefault();
-    props.onPassingToApp(content);
-    updatecontent("");
     if (content) {
-      updateCondition(true);
+      props.onPassingToApp(content);
+      updatecontent("");
     } else {
-      updateCondition(false);
     }
   };
   const passContent = (takenContnet) => {
@@ -22,7 +19,6 @@ export default function GoalWrapper(props) {
     <form className="form-style" onSubmit={submittingForm}>
       <FormContent
         onPassingData={passContent}
-        onCondition={styleCondition}
         controlledValue={content}
       ></FormContent>
     </form>
