@@ -7,7 +7,7 @@ export default function TextInput(props) {
   return (
     <div>
       <input
-        className={`text-input ${!props.styleCondition ? "invalid" : "valid"}`}
+        className={`text-input`}
         type={"text"}
         onChange={liftUpValue}
         value={props.bindedValue}

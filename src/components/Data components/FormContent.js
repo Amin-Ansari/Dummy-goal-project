@@ -25,6 +25,7 @@ const FormContent = (props) => {
       <Label
         styleCondition={condition}
         onFocus={checkWhenFocused}
+        onKeyUp={checkWhenFocused}
         onBlur={resetOnBlur}
       >
         <span>Course Goal</span>
