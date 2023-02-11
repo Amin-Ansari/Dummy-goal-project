@@ -4,17 +4,11 @@ import TextInput from "./TextInput";
 import AddButton from "./AddButton";
 import { useState } from "react";
 const FormContent = (props) => {
-  const [value, updateValue] = useState("");
-  const whenYouType = function (event) {
-    if (event.key != "Enter") {
-      props.onPassingData(value);
-    }
-  };
   const takeDataFromInput = (takenValue) => {
-    updateValue(takenValue);
+    props.onPassingData(takenValue);
   };
   return (
-    <div className="form-content" onKeyUp={whenYouType}>
+    <div className="form-content">
       <Label styleCondition={props.onCondition}>
         <TextInput
           onTakeValue={takeDataFromInput}

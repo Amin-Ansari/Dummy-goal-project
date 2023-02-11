@@ -8,7 +8,6 @@ export default function GoalWrapper(props) {
   const submittingForm = (eventObject) => {
     eventObject.preventDefault();
     props.onPassingToApp(content);
-    console.log(content);
     updatecontent("");
     if (content) {
       updateCondition(true);
@@ -18,7 +17,6 @@ export default function GoalWrapper(props) {
   };
   const passContent = (takenContnet) => {
     updatecontent(takenContnet);
-    console.log("Pass content happend");
   };
   return (
     <form className="form-style" onSubmit={submittingForm}>

@@ -3,7 +3,6 @@ import "./TextInput.css";
 export default function TextInput(props) {
   const liftUpValue = (eventObject) => {
     props.onTakeValue(eventObject.target.value);
-    console.log(props.bindedValue);
   };
   return (
     <div>
