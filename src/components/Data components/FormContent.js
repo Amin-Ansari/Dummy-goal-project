@@ -5,8 +5,10 @@ import AddButton from "./AddButton";
 import { useState } from "react";
 const FormContent = (props) => {
   const [value, updateValue] = useState("");
-  const whenYouType = function () {
-    props.onPassingData(value);
+  const whenYouType = function (event) {
+    if (event.key != "Enter") {
+      props.onPassingData(value);
+    }
   };
   const takeDataFromInput = (takenValue) => {
     updateValue(takenValue);
@@ -17,6 +19,7 @@ const FormContent = (props) => {
         <TextInput
           onTakeValue={takeDataFromInput}
           styleCondition={props.onCondition}
+          bindedValue={props.controlledValue}
         ></TextInput>
       </Label>
       <AddButton>Add goal</AddButton>

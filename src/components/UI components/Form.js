@@ -5,26 +5,27 @@ import { useState } from "react";
 export default function GoalWrapper(props) {
   const [content, updatecontent] = useState("");
   const [styleCondition, updateCondition] = useState(true);
-  const passContent = (takenContnet) => {
-    updatecontent(takenContnet);
-  };
   const submittingForm = (eventObject) => {
     eventObject.preventDefault();
-    if (document.querySelector("input").value) {
-      props.onPassingToApp(content);
-      document.querySelector("input").value = "";
-      updatecontent("");
+    props.onPassingToApp(content);
+    console.log(content);
+    updatecontent("");
+    if (content) {
       updateCondition(true);
     } else {
       updateCondition(false);
     }
   };
-
+  const passContent = (takenContnet) => {
+    updatecontent(takenContnet);
+    console.log("Pass content happend");
+  };
   return (
     <form className="form-style" onSubmit={submittingForm}>
       <FormContent
         onPassingData={passContent}
         onCondition={styleCondition}
+        controlledValue={content}
       ></FormContent>
     </form>
   );
