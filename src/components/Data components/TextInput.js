@@ -7,7 +7,11 @@ export default function TextInput(props) {
   return (
     <div>
       <input
-        className={styles.textinput}
+        className={`${styles.textinput} ${
+          document.querySelector("input").value == ""
+            ? styles.invalid
+            : styles.valid
+        }`}
         type={"text"}
         onChange={liftUpValue}
         value={props.bindedValue}
