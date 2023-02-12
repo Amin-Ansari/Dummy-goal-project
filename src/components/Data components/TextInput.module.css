@@ -1,14 +1,14 @@
-.text-input {
+.textinput {
   padding: 11px 20px;
   width: 100%;
   border: 2px solid #bfbfbf;
 }
-.text-input:focus {
+.textinput:focus {
   outline: none;
 }
-.text-input.valid {
+.textinput.valid {
   background-color: transparent;
 }
-.text-input.invalid {
+.textinput.invalid {
   background-color: red;
 }

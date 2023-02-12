@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./TextInput.css";
+import styles from "./TextInput.module.css";
 export default function TextInput(props) {
   const liftUpValue = (eventObject) => {
     props.onTakeValue(eventObject.target.value);
@@ -7,7 +7,7 @@ export default function TextInput(props) {
   return (
     <div>
       <input
-        className={`text-input`}
+        className={styles.textinput}
         type={"text"}
         onChange={liftUpValue}
         value={props.bindedValue}
